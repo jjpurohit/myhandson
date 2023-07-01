@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-south1-docker.pkg.dev/stunning-saga-386406/docker1/flask-server1:latest",
+        "us-central1-docker.pkg.dev/stunning-saga-386406/docker2/flask-server1:latest",
         
         ".",
       ]
@@ -15,7 +15,7 @@ steps:
     args:
       [
         "push",
-        "asia-south1-docker.pkg.dev/stunning-saga-386406/docker1/flask-server1:latest",
+        "us-central1-docker.pkg.dev/stunning-saga-386406/docker2/flask-server1:latest",
       ]
 
   # Deploy the image to Cloud Run
@@ -25,9 +25,9 @@ steps:
       - "deploy"
       - "flask-server1"
       - "--image"
-      - "asia-south1-docker.pkg.dev/stunning-saga-386406/docker1/flask-server1:latest"
+      - "us-central1-docker.pkg.dev/stunning-saga-386406/docker2/flask-server1:latest"
       - "--region"
-      - "asia-south1"
+      - "us-central1"
       - "--platform"
       - "managed"
       - "--allow-unauthenticated"
